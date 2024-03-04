@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes
 
 
 
-data class Hewan(
+data class Lampu(
     val nama : String,
     @DrawableRes val imageResId: Int
 )

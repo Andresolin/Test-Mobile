@@ -23,17 +23,17 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import org.d3if3002.testmobile.model.Hewan
+import org.d3if3002.testmobile.model.Lampu
 import org.d3if3002.testmobile.ui.theme.TestMobileTheme
 
 class MainActivity : ComponentActivity() {
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GaleriHewan(data[index]){
+                    Lamp(data[index]){
                     index = if (index == data.size - 1) 0 else index + 1
                 }
             }
@@ -56,15 +56,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-        private fun getData(): List<Hewan>{
+        private fun getData(): List<Lampu>{
                 return listOf(
-                    Hewan("Ayam", R.drawable.ayam),
-                    Hewan("Bebek", R.drawable.bebek),
-                    Hewan("Domba", R.drawable.domba),
-                    Hewan("Kambing", R.drawable.kambing),
-                    Hewan("Sapi", R.drawable.sapi),
-
-
+                    Lampu("Lampu Mati", R.drawable.lampu_mati),
+                    Lampu("Lampu Hidup", R.drawable.lampu_hidup)
                 )
 
         }
@@ -92,7 +87,9 @@ fun MainScreen(content: @Composable (Modifier) -> Unit) {
 }
 
 @Composable
-fun GaleriHewan(hewan: Hewan, onClick: () -> Unit = {}) {
+fun Lamp(lampu: Lampu, onClick: () -> Unit = {}) {
+    var isLampuOn by remember { mutableStateOf(false) }
+
         MainScreen {modifier ->
             Column (
                     modifier = modifier
@@ -103,27 +100,27 @@ fun GaleriHewan(hewan: Hewan, onClick: () -> Unit = {}) {
 
             ){
                 Image(
-                    painter = painterResource(hewan.imageResId),
-                    contentDescription = stringResource(id = R.string.gambar, hewan.nama),
+                    painter = painterResource(if (isLampuOn)R.drawable.lampu_hidup else R.drawable.lampu_mati),
+                    contentDescription = stringResource(id = R.string.gambar, lampu.nama),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.size(132.dp)
                 )
 
                 Text(
-                    text = hewan.nama,
+                    text = lampu.nama,
                     style = MaterialTheme.typography.headlineLarge,
                     modifier = Modifier.padding(top = 16.dp)
                 )
 
                 Button(
-                    onClick = {onClick()},
+                    onClick = {isLampuOn = !isLampuOn},
                     modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(top = 24.dp),
                     contentPadding = PaddingValues(16.dp)
 
                     ) {
-                     Text(text = stringResource(R.string.lanjut))
+                    Text(text = if (isLampuOn) stringResource(R.string.matikan) else stringResource(R.string.hidupkan))
                 }
             }
         }
@@ -136,7 +133,7 @@ fun GaleriHewan(hewan: Hewan, onClick: () -> Unit = {}) {
 @Composable
 fun ScreenPreview() {
     TestMobileTheme {
-        GaleriHewan(Hewan("Ayam", R.drawable.ayam))
+        Lamp(Lampu("Lampu Mati", R.drawable.lampu_mati))
     }
 }
 
