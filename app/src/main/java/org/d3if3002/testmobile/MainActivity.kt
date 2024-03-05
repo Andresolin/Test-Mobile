@@ -106,8 +106,14 @@ fun Lamp(lampu: Lampu, onClick: () -> Unit = {}) {
                     modifier = Modifier.size(132.dp)
                 )
 
+                val lampuStatusText = if (isLampuOn) {
+                    stringResource(R.string.mati)
+                } else {
+                    stringResource(R.string.hidup)
+                }
+
                 Text(
-                    text = lampu.nama,
+                    text = lampuStatusText,
                     style = MaterialTheme.typography.headlineLarge,
                     modifier = Modifier.padding(top = 16.dp)
                 )

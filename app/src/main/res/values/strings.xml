@@ -3,4 +3,6 @@
     <string name="gambar">Gambar %1$s</string>
     <string name="matikan">Matikan</string>
     <string name="hidupkan">Hidupkan</string>
+    <string name="mati">Lampu Mati</string>
+    <string name="hidup">Lampu Nyala</string>
 </resources>
