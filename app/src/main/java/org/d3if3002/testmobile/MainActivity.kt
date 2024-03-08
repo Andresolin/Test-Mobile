@@ -34,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.d3if3002.testmobile.model.Lampu
+import org.d3if3002.testmobile.ui.screen.MainScreen
 import org.d3if3002.testmobile.ui.theme.TestMobileTheme
 
 class MainActivity : ComponentActivity() {
@@ -46,53 +47,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    MainScreen()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name : String) {
-    MainScreen{ modifier ->
-        Text(
-            text = "Hello $name",
-            modifier = modifier
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MainScreen(content: @Composable (Modifier) -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(title = {
-                Text(text = stringResource(id = R.string.app_name))
-            },
-                colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    titleContentColor = MaterialTheme.colorScheme.primary
-                )
-            )
-        }
-    ) {padding ->
-        content(Modifier.padding(padding))
-    }
-}
-
-
-
-
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TestMobileTheme {
-        Greeting("Android")
-    }
-}
 
 
 
