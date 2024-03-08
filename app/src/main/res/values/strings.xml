@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">Mobpro 1</string>
-    <string name="bmi_intro">BMI, atau Body Mass Index merupakan cara untuk apakah berat badan mu ideal atau tidak. Cobalah sekarang!  </string>
-    <string name="berat_badan">Berat badan</string>
-    <string name="tinggi_badan">Tinggi badan</string>
-    <string name="pria">Pria</string>
-    <string name="wanita">Wanita</string>
+    <string name="hitung_persegi_panjang_intro">Mari menghitung luas dan keliling persegi panjang! Masukkan data berikut.</string>
     <string name="hitung">Hitung</string>
-    <string name="bmi_x">BMI: %1$.2f</string>
-    <string name="kurus">Kurus</string>
-    <string name="ideal">Ideal</string>
-    <string name="gemuk">Gemuk</string>
+    <string name="luas_x">Luas: %1$.2f</string>
+    <string name="keliling_x">Keliling: %1$.2f</string>
     <string name="input_invalid">Tidak boleh kosong</string>
+    <string name="panjang_persegi_panjang">Panjang persegi panjang</string>
+    <string name="lebar_persegi_panjang">Lebar persegi panjang</string>
+    <string name="reset">Reset</string>
 </resources>
