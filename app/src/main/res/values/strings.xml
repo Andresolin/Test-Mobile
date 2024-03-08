@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Mobpro 1</string>
-    <string name="gambar">Gambar %1$s</string>
-    <string name="matikan">Matikan</string>
-    <string name="hidupkan">Hidupkan</string>
-    <string name="mati">Lampu Mati</string>
-    <string name="hidup">Lampu Nyala</string>
+    <string name="bmi_intro">BMI, atau Body Mass Index merupakan cara untuk apakah berat badan mu ideal atau tidak. Cobalah sekarang!  </string>
+    <string name="berat_badan">Berat badan</string>
+    <string name="tinggi_badan">Tinggi badan</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="hitung">Hitung</string>
 </resources>
