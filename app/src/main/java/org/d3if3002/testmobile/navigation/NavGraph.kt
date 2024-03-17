@@ -10,13 +10,13 @@ import org.d3if3002.testmobile.ui.screen.AboutScreen
 import org.d3if3002.testmobile.ui.screen.MainScreen
 
 @Composable
-fun SetupNavGraph(navController: NavController = rememberNavController()) {
+fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
     NavHost(
         navController = navController as NavHostController,
         startDestination = Screen.Home.route
     ) {
         composable(route  = Screen.Home.route){
-            MainScreen()
+            MainScreen(navController)
         }
 
         composable(route  = Screen.About.route){
