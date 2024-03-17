@@ -8,4 +8,18 @@
     <string name="panjang_persegi_panjang">Panjang persegi panjang</string>
     <string name="lebar_persegi_panjang">Lebar persegi panjang</string>
     <string name="reset">Reset</string>
+
+    <string name="tentang_persegi_panjang">Tentang Persegi Panjang</string>
+    <string name="copyright">Persegi panjang adalah bangun ruang dua dimensi dengan dua pasang sisi sejajar dan sudut siku-siku.\n\n
+    1. Panjang dan Lebar: Menentukan dimensi utama, dengan panjang adalah jarak antara dua sisi sejajar yang sama panjang, dan lebar adalah jarak antara dua sisi sejajar yang pendeknya sama.\n
+    2. Luas: Diukur dengan mengalikan panjang dengan lebar: Luas = Panjang x Lebar.\n
+    3. Keliling: Jumlah panjang semua sisi-sisinya: Keliling = 2 × (Panjang + Lebar).\n
+    4. Diagonal: Garis lurus menghubungkan dua sudut yang tidak bersebelahan, dapat dihitung dengan rumus Pythagoras: Diagonal = √(Panjang² + Lebar²).\n
+    5. Perbandingan Panjang dan Lebar: Penting dalam menentukan proporsi bentuk persegi panjang.\n
+    6. Sudut: Memiliki empat sudut siku-siku, masing-masing berukuran 90 derajat.\n\n
+    Persegi panjang digunakan dalam berbagai konteks seperti perencanaan tata letak ruangan, perhitungan luas lahan, dan desain arsitektur.\n
+    </string>
+    <string name="kembali">Kembali</string>
+    <string name="bagikan">Bagikan</string>v
+    <string name="bagikan_template">Panjang persegi panjang: %1$s cm\nLebar persegi panjang: %2$s cm\nLuas persegi panjang: %3$.2f cm\u00B2\nKeliling persegi panjang: %4$.2f cm</string>
 </resources>

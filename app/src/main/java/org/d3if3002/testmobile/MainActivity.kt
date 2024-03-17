@@ -34,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.d3if3002.testmobile.model.Lampu
+import org.d3if3002.testmobile.navigation.SetupNavGraph
 import org.d3if3002.testmobile.ui.screen.MainScreen
 import org.d3if3002.testmobile.ui.theme.TestMobileTheme
 
@@ -47,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainScreen()
+                   SetupNavGraph()
                 }
             }
         }
