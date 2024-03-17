@@ -23,3 +23,4 @@
     <string name="bagikan">Bagikan</string>v
     <string name="bagikan_template">Panjang persegi panjang: %1$s cm\nLebar persegi panjang: %2$s cm\nLuas persegi panjang: %3$.2f cm\u00B2\nKeliling persegi panjang: %4$.2f cm</string>
 </resources>
+<!---->
