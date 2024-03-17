@@ -206,7 +206,7 @@ fun ScreenContent(modifier: Modifier) {
                           shareData(
                               context = context,
                               message = context.getString(R.string.bagikan_template,
-                                    berat, tinggi, bmi,
+                                    berat, tinggi, gender, bmi,
                                     context.getString(kategori).uppercase())
                                   )
                 },
