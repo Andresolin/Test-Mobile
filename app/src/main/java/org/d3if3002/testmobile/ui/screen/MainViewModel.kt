@@ -1,6 +1,8 @@
 package org.d3if3002.testmobile.ui.screen
 
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
+import org.d3if3002.testmobile.R
 import org.d3if3002.testmobile.model.Catatan
 
 class MainViewModel : ViewModel() {
@@ -9,13 +11,13 @@ class MainViewModel : ViewModel() {
 
     private fun getDataDummy(): List<Catatan> {
         val data = mutableListOf<Catatan>()
-        for (i in 29 downTo 20) {
+        for (i in 1 until  9) {
             data.add(
                 Catatan(
                         i.toLong(),
-                    "Kuliah Mobpro $i Feb",
-                    "Yey, hari ini belajar membuat aplikasi android counter dan berhasil. hehe.. Mudah2an modul selanjutnya juga lancar. Amin.",
-                    "2024-02-$i 12:34:56"
+                    "$i",
+                    "670622300$i",
+                    "D3IF-46-0$i"
                 )
             )
         }

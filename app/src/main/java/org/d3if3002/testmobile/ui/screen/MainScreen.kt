@@ -100,7 +100,7 @@ fun ScreenContent(modifier: Modifier) {
         ){
             items(data) {
                 ListItem(catatan = it){
-                    val pesan = context.getString(R.string.x_diklik, it.judul)
+                    val pesan = context.getString(R.string.x_diklik, it.namaDosen)
                     Toast.makeText(context, pesan, Toast.LENGTH_SHORT).show()
                 }
                 Divider()
@@ -121,16 +121,19 @@ fun ListItem(catatan: Catatan, onClick: () -> Unit) {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        Text(text = catatan.judul,
+
+        val namaDosen = LocalContext.current.resources
+            .getStringArray(R.array.nama_dosen)
+        Text(text = namaDosen[catatan.id.toInt() - 1],
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontWeight =    FontWeight.Bold
         )
-        Text(text = catatan.cacatan,
+        Text(text = catatan.nim,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
-        Text(text = catatan.tanggal)
+        Text(text = catatan.kelas)
     }
 }
 

@@ -4,4 +4,15 @@
     <string name="x_diklik">%1$s diklik!</string>
     <string name="tambah_catatan">Tambah Catatan</string>
     <string name="tambah_eror">Belum bisatambah catatan</string>
+
+    <string-array name="nama_dosen">
+        <item>Andre Solin</item>
+        <item>Feby Ana</item>
+        <item>Mariana</item>
+        <item>Diki</item>
+        <item>Abil</item>
+        <item>Joko</item>
+        <item>Budi</item>
+        <item>Tono</item>
+    </string-array>
 </resources>
