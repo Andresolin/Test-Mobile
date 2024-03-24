@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">Mobpro 1</string>
-    <string name="gambar">Gambar %1$s</string>
-    <string name="matikan">Matikan</string>
-    <string name="hidupkan">Hidupkan</string>
-    <string name="mati">Lampu Mati</string>
-    <string name="hidup">Lampu Nyala</string>
+    <string name="list_kosong">Belum ada data</string>
 </resources>
