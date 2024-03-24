@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -44,6 +45,8 @@ import org.d3if3002.testmobile.ui.theme.TestMobileTheme
 @Composable
 fun MainScreen() {
 
+    val context = LocalContext.current
+
     Scaffold(
         topBar = {
             TopAppBar(title = {
@@ -55,17 +58,17 @@ fun MainScreen() {
                 )
             )
         },
-//        floatingActionButton = {
-//            FloatingActionButton(
-//                onClick = { Toast.makeText(context, R.string.belu)}
-//            ) {
-//                Icon(
-//                    imageVector = Icons.Filled.Add,
-//                    contentDescription = stringResource(id = R.string.tambah_catatan),
-//                    tint = MaterialTheme.colorScheme.primary
-//                )
-//            }
-//        }
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { Toast.makeText(context, R.string.tambah_eror, Toast.LENGTH_SHORT).show()}
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Add,
+                    contentDescription = stringResource(id = R.string.tambah_catatan),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+        }
     ) {padding ->
         ScreenContent(Modifier.padding(padding))
     }
@@ -92,7 +95,8 @@ fun ScreenContent(modifier: Modifier) {
         }
     } else {
         LazyColumn(
-            modifier =modifier.fillMaxSize()
+            modifier =modifier.fillMaxSize(),
+            contentPadding = PaddingValues(bottom = 84.dp)
         ){
             items(data) {
                 ListItem(catatan = it){
